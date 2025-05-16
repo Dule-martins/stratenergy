@@ -53,7 +53,6 @@
 /* ===================================
     General
 ====================================== */
-
 body {font-family: 'Roboto', sans-serif; font-size: 15px;color: #2b2b2b;font-weight:300;line-height: 26px;letter-spacing: 0.5px;overflow-x: hidden;-webkit-font-smoothing: antialiased;}
 p{margin-bottom: 0;color: #6d6d6d;}
 a {color:inherit;}
@@ -1147,6 +1146,37 @@ header .center-logo a.logo img {max-width: 130px;}
     line-height: 1;
 }
 
+/* ==================================
+Card Icon
+====================================*/
+card-style1:hover .card-icon {
+    -webkit-transform: translateY(-10px) translate3d(0, -10px, 0);
+    -moz-transform: translateY(-10px) translate3d(0, -10px, 0);
+    -ms-transform: translateY(-10px) translate3d(0, -10px, 0);
+    transform: translateY(-10px) translate3d(0, -10px, 0);
+    background: #F38734;
+}
+
+.card-style1 .card-icon {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    text-align: center;
+    background: #117865;
+    line-height: 110px;
+    margin: -100px auto 20px auto;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+    -moz-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+    -ms-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+    -o-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+    transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+}
 
 /* ===================================
     Team
@@ -2127,7 +2157,7 @@ ul.packages li i.fa-times{
     background: url(../images/bg-img6.jpg);
 }
 .bg-img10{
-    background: url(../images/bg-img7.jpg);
+    background: url(../images/bg-04.jpg);
 }
 .bg-img11{
     background: url(../images/bg-img8.jpg);
@@ -4297,3 +4327,5 @@ ul.count_down.white li p:nth-child(2) {
     }
 
 }
+
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css')
