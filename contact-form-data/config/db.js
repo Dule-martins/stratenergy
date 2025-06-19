@@ -1,10 +1,21 @@
 
-const mysql = require("mysql2");
-const pool  = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME,
+const mysql = require('mysql2');
+
+// Create a connection
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'stratenergy_localhost_db'
 });
 
-module.exports = pool.promise(); //allow async/await
+// Connect to the database
+connection.connect((err) => {
+    if (err) {
+        console.error('Error connecting to MySQL:', err.message);
+        return;
+    }
+    console.log('Connected to MySQL database!');
+});
+
+module.exports = connection;

@@ -5,7 +5,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     const data = Object.fromEntries(formData.entries()); // Convert to JSON object
 
     try {
-      const response = await fetch("http://localhost:3000/api/contact", {
+      const response = await fetch("http://localhost:3000/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

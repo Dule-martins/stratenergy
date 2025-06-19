@@ -1,10 +1,10 @@
 
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const db = require("../config/db");
-const nodemailer = require("nodemailer");
+const db = require('../config/db');
+const nodemailer = require('nodemailer');
 
-router.post("/", async (req,res) => {
+router.post('/', async (req,res) => {
     const { first_name, last_name, email, phone, message } = req.body;
 
     try {

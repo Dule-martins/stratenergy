@@ -452,80 +452,80 @@ jQuery(function ($) {
 
 
     //Contact Us
-    $("#submit_btn").click(function () {
+    // $("#submit_btn").click(function () {
 
         //disable submit button on click
-        $("#submit_btn").attr("disabled", "disabled");
-        $("#submit_btn span").text('Sending');
-        $("#submit_btn i").removeClass('d-none');
+        // $("#submit_btn").attr("disabled", "disabled");
+        // $("#submit_btn span").text('Sending');
+        // $("#submit_btn i").removeClass('d-none');
 
-        var user_name = $('input[name=first_name]').val() + ' ' + $('input[name=last_name]').val();
-        var user_email = $('input[name=email]').val();
-        var user_phone = $('input[name=phone]').val();
-        var user_message = $('textarea[name=message]').val();
+        // var user_name = $('input[name=first_name]').val() + ' ' + $('input[name=last_name]').val();
+        // var user_email = $('input[name=email]').val();
+        // var user_phone = $('input[name=phone]').val();
+        // var user_message = $('textarea[name=message]').val();
 
         //simple validation at client's end
-        var post_data, output;
-        var proceed = true;
-        if (user_name == "") {
-            proceed = false;
-        }
-        if (user_email == "") {
-            proceed = false;
-        }
+        // var post_data, output;
+        // var proceed = true;
+        // if (user_name == "") {
+        //     proceed = false;
+        // }
+        // if (user_email == "") {
+        //     proceed = false;
+        // }
         // if (user_phone == "") {
-        //proceed = false;
+        // proceed = false;
         // }
 
-        if (user_message == "") {
-            proceed = false;
-        }
+        // if (user_message == "") {
+        //     proceed = false;
+        // }
         //everything looks good! proceed...
-        if (proceed) {
+        // if (proceed) {
 
             //data to be sent to server
-            post_data = {
-                'userName': user_name,
-                'userEmail': user_email,
-                'userPhone': user_phone,
-                'userMessage': user_message
-            };
+            // post_data = {
+            //     'userName': user_name,
+            //     'userEmail': user_email,
+            //     'userPhone': user_phone,
+            //     'userMessage': user_message
+            // };
 
             //Ajax post data to server
-            $.post('contact.php', post_data, function (response) {
+            // $.post('#contactForm', post_data, function (response) {
 
                 //load json data from server and output message
-                if (response.type == 'error') {
-                    output = '<div class="alert-danger" style="padding:10px; margin-bottom:30px;">' + response.text + '</div>';
-                } else {
-                    output = '<div class="alert-success" style="padding:10px; margin-bottom:30px;">' + response.text + '</div>';
+                // if (response.type == 'error') {
+                //     output = '<div class="alert-danger" style="padding:10px; margin-bottom:30px;">' + response.text + '</div>';
+                // } else {
+                //     output = '<div class="alert-success" style="padding:10px; margin-bottom:30px;">' + response.text + '</div>';
 
                     //reset values in all input fields
-                    $('.contact-form input').val('');
-                    $('.contact-form textarea').val('');
-                }
+                //     $('.contact-form input').val('');
+                //     $('.contact-form textarea').val('');
+                // }
 
-                $("#result").hide().html(output).slideDown();
+                // $("#result").hide().html(output).slideDown();
 
                 // enable submit button on action done
-                $("#submit_btn").removeAttr("disabled");
-                $("#submit_btn span").text('Contact Now');
-                $("#submit_btn i").addClass('d-none');
+            //     $("#submit_btn").removeAttr("disabled");
+            //     $("#submit_btn span").text('Contact Now');
+            //     $("#submit_btn i").addClass('d-none');
 
-            }, 'json');
+            // }, 'json');
 
-        }
-        else {
-            output = '<div class="alert-danger" style="padding:10px; margin-bottom:30px;">Please provide the missing fields.</div>';
-            $("#result").hide().html(output).slideDown();
+        // }
+        // else {
+        //     output = '<div class="alert-danger" style="padding:10px; margin-bottom:30px;">Please provide the missing fields.</div>';
+        //     $("#result").hide().html(output).slideDown();
 
             // enable submit button on action done
-            $("#submit_btn").removeAttr("disabled");
-            $("#submit_btn span").text('Contact Now');
-            $("#submit_btn i").addClass('d-none');
-        }
+    //         $("#submit_btn").removeAttr("disabled");
+    //         $("#submit_btn span").text('Contact Now');
+    //         $("#submit_btn i").addClass('d-none');
+    //     }
 
-    });
+    // });
 
 
     /*============================================*
